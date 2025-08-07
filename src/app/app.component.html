@@ -1,0 +1,20 @@
+<div class="botoes">
+  <button (click)="carregarCloudfront()">Imagens CloudFront</button>
+  <button (click)="carregarAzion()">Imagens Azion</button>
+</div>
+
+<!-- <div class="grid-imagens">
+  @for (url of imagens(); track url) {
+    <img [src]="url" loading="lazy" alt="Imagem CDN" />
+  }
+</div> -->
+
+<div class="grid-imagens">
+  @for (url of imagens(); track url) {
+    <img
+      #imgs
+      [attr.data-src]="url"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" 
+      alt="Imagem CDN" />
+  }
+</div>
